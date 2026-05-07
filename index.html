@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentaur — The mentor you've always needed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Men<em>taur</em></div>
+  <div class="nav-links">
+    <a class="nav-link" href="#problem">The problem</a>
+    <a class="nav-link" href="#demo">Platform</a>
+    <a class="nav-link" href="#features">Features</a>
+    <a class="nav-link" href="#pricing">Pricing</a>
+    <button class="nav-cta">Back this project</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Now raising on Kickstarter — join 847 backers
+    </div>
+    <h1>The mentor you've<br/><em>always needed.</em></h1>
+    <p class="hero-sub">Vetted C-suite executives, matched to your specific career moment, in a structured, private, accountable relationship. Not coaching. Not a directory. Mentorship that actually changes what happens next.</p>
+    <div class="hero-actions">
+      <button class="btn-primary">Back this project →</button>
+      <button class="btn-ghost" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">See the platform</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="n">£38,200</div><div class="l">raised of £50,000 goal</div></div>
+      <div class="hero-stat"><div class="n">847</div><div class="l">backers</div></div>
+      <div class="hero-stat"><div class="n">14</div><div class="l">days remaining</div></div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem" class="problem-section">
+  <div class="problem-inner">
+    <div class="section-label">The problem</div>
+    <div class="section-h" style="max-width:600px;">63% of professionals have <em>never</em> had a formal mentor.</div>
+    <p class="section-sub">The right mentors exist. There is simply no infrastructure to reach them — until now.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-num">01</div>
+        <h3>Access is gatekept</h3>
+        <p>The best mentors are accessible only through elite schools, the right firms, or the right parents. Talent and ambition are not the bottleneck — access is.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">02</div>
+        <h3>Coaching isn't mentoring</h3>
+        <p>Certified coaches are trained to ask questions. What ambitious professionals need is someone who has done the thing — raised the round, run the P&L, navigated the board.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">03</div>
+        <h3>Generic platforms don't vet</h3>
+        <p>Crowdsourced networks offer variable quality, unverified credentials, and no accountability. A senior professional sharing their fundraising deck deserves better.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">04</div>
+        <h3>The stakes are too high</h3>
+        <p>Board conversations, funding asks, pivots — these shape the next decade of your career. Getting them right with guidance is transformative. Getting them wrong is expensive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section id="demo" class="demo-section">
+  <div class="demo-inner">
+    <div class="section-label">The platform</div>
+    <div class="section-h" style="max-width:580px;">A private club for your <em>career.</em></div>
+    <p class="section-sub" style="margin-bottom:40px;">Explore the Mentaur platform — the same experience our backers will access on launch.</p>
+
+    <div class="demo-tabs">
+      <button class="demo-tab active" onclick="showScreen('home',this)">Home feed</button>
+      <button class="demo-tab" onclick="showScreen('discover',this)">Discover</button>
+      <button class="demo-tab" onclick="showScreen('relationships',this)">Relationships</button>
+      <button class="demo-tab" onclick="showScreen('vault',this)">Vault</button>
+      <button class="demo-tab" onclick="showScreen('profile',this)">Profile</button>
+    </div>
+
+    <div class="browser">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+        </div>
+        <div class="browser-url">mentaur.co · Secure</div>
+      </div>
+      <div class="app-nav">
+        <div class="app-logo">Men<em>taur</em></div>
+        <div class="app-nav-links">
+          <span class="app-nav-link" id="nav-home" onclick="showScreen('home',null,true)">Home</span>
+          <span class="app-nav-link" id="nav-discover" onclick="showScreen('discover',null,true)">Discover</span>
+          <span class="app-nav-link" id="nav-relationships" onclick="showScreen('relationships',null,true)">Relationships</span>
+          <span class="app-nav-link" id="nav-vault" onclick="showScreen('vault',null,true)">Vault</span>
+          <span class="app-nav-link" id="nav-profile" onclick="showScreen('profile',null,true)">Profile</span>
+        </div>
+        <div class="app-avatar">JB</div>
+      </div>
+
+      <!-- HOME FEED -->
+      <div id="screen-home" class="screen active">
+        <div class="screen-body">
+          <div class="feed-header">
+            <div>
+              <div class="feed-greeting">Good morning, Jordan</div>
+              <div class="feed-title">Your connected feed</div>
+            </div>
+            <div class="feed-controls">
+              <button class="feed-btn on">Connected</button>
+              <button class="feed-btn off">Explore</button>
+            </div>
+          </div>
+          <div class="session-reminder">
+            <div>
+              <div class="session-reminder-text">Next session: Alexandra Chen</div>
+              <div class="session-reminder-sub">Thursday 10:00 AM · Intro Call · 30 min</div>
+            </div>
+            <button class="session-reminder-btn">View details</button>
+          </div>
+          <div class="post">
+            <div class="post-head">
+              <div class="av av-1">AC</div>
+              <div class="post-meta">
+                <div class="post-name">Alexandra Chen <span class="verified">✓ Verified</span></div>
+                <div class="post-role">Former CEO, TechVision · Partner at Sequoia · 2h ago</div>
+              </div>
+              <span class="post-tag tag-insight">Mentor insight</span>
+            </div>
+            <div class="post-body">"The biggest mistake I see founders make in a Series A process is optimising for <strong>valuation over fit.</strong> The investor you choose will be in your board meetings for 7 years. In that time, the valuation delta becomes irrelevant. The relationship does not."</div>
+            <div class="post-actions">
+              <span class="post-action">Helpful (12)</span>
+              <span class="post-action">Save</span>
+              <span class="post-action">Reply privately</span>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-head">
+              <div class="av av-2">PR</div>
+              <div class="post-meta">
+                <div class="post-name">Priya R.</div>
+                <div class="post-role">Founder, HealthBridge · mentee · 5h ago</div>
+              </div>
+              <span class="post-tag tag-milestone">Milestone</span>
+            </div>
+            <div class="post-body">Closed our seed round today — <strong>£1.2M from three investors.</strong> Six months ago I didn't know how to build a data room. Grateful for every session that got us here.</div>
+            <div class="post-actions">
+              <span class="post-action">Congratulate (8)</span>
+              <span class="post-action">Save</span>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-head">
+              <div class="av av-3">MO</div>
+              <div class="post-meta">
+                <div class="post-name">Marcus Okafor <span class="verified">✓ Verified</span></div>
+                <div class="post-role">CFO, Global Ventures · Ex Goldman Sachs · yesterday</div>
+              </div>
+              <span class="post-tag tag-session">Session insight</span>
+            </div>
+            <div class="post-body">"In our session today we covered financial modelling for pre-revenue SaaS. Key insight: your <strong>unit economics story matters more than your revenue projection</strong> in early-stage fundraising. Investors know you don't know the revenue. They want to know you understand the model."</div>
+            <div class="post-actions">
+              <span class="post-action">Helpful (4)</span>
+              <span class="post-action">Book a session with Marcus</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DISCOVER -->
+      <div id="screen-discover" class="screen">
+        <div class="screen-body">
+          <div class="search-bar">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input class="search-input" placeholder="Search by expertise, industry, career stage…" />
+          </div>
+          <div class="filter-row">
+            <button class="filter-pill on">All</button>
+            <button class="filter-pill">Fundraising</button>
+            <button class="filter-pill">Scaling</button>
+            <button class="filter-pill">Career pivot</button>
+            <button class="filter-pill">FinTech</button>
+            <button class="filter-pill">Available now</button>
+          </div>
+          <div class="mentor-grid">
+            <div class="mentor-card m1">
+              <div class="mentor-card-head">
+                <div class="av-lg av-1">AC</div>
+                <div class="mentor-card-info">
+                  <div class="mentor-name">Alexandra Chen <span class="verified" style="font-size:9px;">✓</span></div>
+                  <div class="mentor-title">Former CEO, TechVision Inc.<br/>Now: Partner @ Sequoia</div>
+                </div>
+                <div class="mentor-avail"></div>
+              </div>
+              <div class="mentor-bio">Scaled TechVision from 3 to 400 employees over 7 years. Raised $120M across 4 rounds. Now investing in the next generation of founders.</div>
+              <div class="mentor-tags">
+                <span class="mentor-tag">Scaling</span>
+                <span class="mentor-tag">B2B SaaS</span>
+                <span class="mentor-tag">Fundraising</span>
+              </div>
+              <div class="mentor-meta">
+                <div>
+                  <span class="mentor-rating">★ 4.97</span>
+                  <span class="mentor-sessions" style="margin-left:8px;">142 sessions</span>
+                </div>
+                <button class="connect-btn">Connect</button>
+              </div>
+            </div>
+            <div class="mentor-card m2">
+              <div class="mentor-card-head">
+                <div class="av-lg av-2">MO</div>
+                <div class="mentor-card-info">
+                  <div class="mentor-name">Marcus Okafor <span class="verified" style="font-size:9px;">✓</span></div>
+                  <div class="mentor-title">CFO, Global Ventures<br/>Ex: Goldman Sachs VP</div>
+                </div>
+                <div class="mentor-avail"></div>
+              </div>
+              <div class="mentor-bio">15 years in finance across investment banking and CFO roles. Guided 3 successful IPOs and 8 acquisitions. Expert in pre-IPO readiness.</div>
+              <div class="mentor-tags">
+                <span class="mentor-tag">Financial Strategy</span>
+                <span class="mentor-tag">IPO Readiness</span>
+                <span class="mentor-tag">M&A</span>
+              </div>
+              <div class="mentor-meta">
+                <div>
+                  <span class="mentor-rating">★ 4.92</span>
+                  <span class="mentor-sessions" style="margin-left:8px;">98 sessions</span>
+                </div>
+                <button class="connect-btn">Connect</button>
+              </div>
+            </div>
+            <div class="mentor-card m3">
+              <div class="mentor-card-head">
+                <div class="av-lg" style="background:#5A4A8A;color:#E8E0F8;">PS</div>
+                <div class="mentor-card-info">
+                  <div class="mentor-name">Priya Sharma <span class="verified" style="font-size:9px;">✓</span></div>
+                  <div class="mentor-title">COO, HealthBridge<br/>Ex: McKinsey Principal</div>
+                </div>
+                <div class="mentor-avail na"></div>
+              </div>
+              <div class="mentor-bio">Transitioned from consulting to operations leadership. Expert in helping professionals pivot into high-growth industries.</div>
+              <div class="mentor-tags">
+                <span class="mentor-tag">Operations</span>
+                <span class="mentor-tag">Healthcare Tech</span>
+                <span class="mentor-tag">Team Building</span>
+              </div>
+              <div class="mentor-meta">
+                <div>
+                  <span class="mentor-rating">★ 4.99</span>
+                  <span class="mentor-sessions" style="margin-left:8px;">203 sessions</span>
+                </div>
+                <button class="connect-btn" style="background:rgba(214,228,247,0.1);color:rgba(214,228,247,0.4);">Waitlist</button>
+              </div>
+            </div>
+            <div class="mentor-card m4">
+              <div class="mentor-card-head">
+                <div class="av-lg" style="background:#6B4030;color:#F0C8A8;">JW</div>
+                <div class="mentor-card-info">
+                  <div class="mentor-name">James Whitfield <span class="verified" style="font-size:9px;">✓</span></div>
+                  <div class="mentor-title">Founder & CEO, NovaPay<br/>Serial Entrepreneur</div>
+                </div>
+                <div class="mentor-avail"></div>
+              </div>
+              <div class="mentor-bio">Built and sold two fintech companies. Third venture NovaPay processing $2B annually. Helps founders avoid the mistakes he made.</div>
+              <div class="mentor-tags">
+                <span class="mentor-tag">FinTech</span>
+                <span class="mentor-tag">Go-To-Market</span>
+                <span class="mentor-tag">Product</span>
+              </div>
+              <div class="mentor-meta">
+                <div>
+                  <span class="mentor-rating">★ 4.88</span>
+                  <span class="mentor-sessions" style="margin-left:8px;">87 sessions</span>
+                </div>
+                <button class="connect-btn">Connect</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RELATIONSHIPS -->
+      <div id="screen-relationships" class="screen">
+        <div class="screen-body">
+          <div style="margin-bottom:20px;">
+            <div class="feed-greeting">2 active relationships</div>
+            <div class="feed-title">My mentors</div>
+          </div>
+          <div class="rel-card">
+            <div class="rel-head">
+              <div class="av-lg av-1">AC</div>
+              <div class="rel-info">
+                <h3>Alexandra Chen <span class="verified">✓ Verified</span></h3>
+                <p>Partner at Sequoia · Connected 3 months ago</p>
+              </div>
+            </div>
+            <div class="session-next">
+              <div class="session-next-dot"></div>
+              <div>
+                <div class="session-next-text">Next session confirmed</div>
+                <div class="session-next-time">Thursday · 10:00 AM · Intro Call · 30 min</div>
+              </div>
+            </div>
+            <div class="rel-stats">
+              <div class="rel-stat"><div class="n">8</div><div class="l">Sessions</div></div>
+              <div class="rel-stat"><div class="n">3</div><div class="l">Goals active</div></div>
+              <div class="rel-stat"><div class="n">4</div><div class="l">Vault docs</div></div>
+            </div>
+            <div class="goal-progress">
+              <div class="goal-label"><span>Close Series A fundraise</span><span>65%</span></div>
+              <div class="goal-bar"><div class="goal-fill" style="width:65%;"></div></div>
+            </div>
+            <div class="goal-progress">
+              <div class="goal-label"><span>Build leadership team to 8 people</span><span>37%</span></div>
+              <div class="goal-bar"><div class="goal-fill" style="width:37%;"></div></div>
+            </div>
+            <div class="rel-actions">
+              <button class="rel-btn primary">View relationship</button>
+              <button class="rel-btn ghost">Message</button>
+              <button class="rel-btn ghost">Book session</button>
+            </div>
+          </div>
+          <div class="rel-card">
+            <div class="rel-head">
+              <div class="av-lg av-2">MO</div>
+              <div class="rel-info">
+                <h3>Marcus Okafor <span class="verified">✓ Verified</span></h3>
+                <p>CFO, Global Ventures · Connected 6 weeks ago</p>
+              </div>
+            </div>
+            <div class="rel-stats">
+              <div class="rel-stat"><div class="n">3</div><div class="l">Sessions</div></div>
+              <div class="rel-stat"><div class="n">1</div><div class="l">Goal active</div></div>
+              <div class="rel-stat"><div class="n">1</div><div class="l">Vault doc</div></div>
+            </div>
+            <div class="goal-progress">
+              <div class="goal-label"><span>Financial model for Series A</span><span>50%</span></div>
+              <div class="goal-bar"><div class="goal-fill" style="width:50%;"></div></div>
+            </div>
+            <div class="rel-actions">
+              <button class="rel-btn primary">View relationship</button>
+              <button class="rel-btn ghost">Message</button>
+              <button class="rel-btn ghost">Book session</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VAULT -->
+      <div id="screen-vault" class="screen">
+        <div class="screen-body">
+          <div class="vault-header">
+            <div>
+              <div class="vault-title">My Vault</div>
+              <div style="font-size:13px;color:rgba(214,228,247,0.4);margin-top:3px;">4 documents · all access logged</div>
+            </div>
+            <button class="vault-upload-btn">+ Upload</button>
+          </div>
+          <div class="vault-nda">
+            <svg class="vault-nda-icon" viewBox="0 0 24 24" fill="none" stroke="#4A7C5F" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span><strong style="color:#8FD4AA;">Platform NDA active</strong> — mentors can view documents you grant access to. They cannot download or share outside Mentaur.</span>
+          </div>
+          <div class="doc-item">
+            <div class="doc-icon">📄</div>
+            <div class="doc-meta">
+              <div class="doc-name">Pitch Deck — Seed Round v3.pdf</div>
+              <div class="doc-info">4.2 MB · uploaded 3 days ago</div>
+            </div>
+            <div class="doc-access shared">Alexandra, Marcus</div>
+          </div>
+          <div class="doc-item">
+            <div class="doc-icon">📊</div>
+            <div class="doc-meta">
+              <div class="doc-name">Financial Model FY2025.xlsx</div>
+              <div class="doc-info">890 KB · uploaded 1 week ago</div>
+            </div>
+            <div class="doc-access shared">Alexandra only</div>
+          </div>
+          <div class="doc-item">
+            <div class="doc-icon">📝</div>
+            <div class="doc-meta">
+              <div class="doc-name">Board Charter Draft.docx</div>
+              <div class="doc-info">210 KB · uploaded 2 weeks ago</div>
+            </div>
+            <div class="doc-access private">Private — no access granted</div>
+          </div>
+          <div class="doc-item">
+            <div class="doc-icon">📋</div>
+            <div class="doc-meta">
+              <div class="doc-name">Cap Table — current.pdf</div>
+              <div class="doc-info">156 KB · uploaded 1 month ago</div>
+            </div>
+            <div class="doc-access shared">Alexandra only</div>
+          </div>
+          <div class="activity-log">
+            <strong style="color:rgba(214,228,247,0.6);">Recent access</strong><br/>
+            <span>Alexandra Chen</span> viewed Pitch Deck — Seed Round v3.pdf · Today 09:14<br/>
+            <span>Marcus Okafor</span> viewed Financial Model FY2025.xlsx · Yesterday 16:42<br/>
+            <span>Alexandra Chen</span> viewed Cap Table — current.pdf · 3 days ago
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFILE -->
+      <div id="screen-profile" class="screen">
+        <div style="background:#0A1628;padding-bottom:24px;">
+          <div class="profile-cover">
+            <div class="profile-avatar-wrap">
+              <div class="profile-avatar">JB</div>
+            </div>
+          </div>
+          <div class="profile-header">
+            <div>
+              <div class="profile-name">Jordan Blackwell</div>
+              <div class="profile-role">Founder · StudioLab · London, UK</div>
+            </div>
+            <span class="profile-plan">Professional</span>
+          </div>
+          <div class="profile-stats-row">
+            <div class="profile-stat"><div class="n">11</div><div class="l">Sessions</div></div>
+            <div class="profile-stat"><div class="n">2</div><div class="l">Mentors</div></div>
+            <div class="profile-stat"><div class="n">4</div><div class="l">Documents</div></div>
+            <div class="profile-stat"><div class="n">4</div><div class="l">Goals</div></div>
+          </div>
+          <div class="profile-section">
+            <div class="profile-section-label">About</div>
+            <div class="profile-bio">Building a creative studio platform for independent artists. Looking for guidance on scaling and our upcoming Series A fundraise. Previously led product at two early-stage startups.</div>
+          </div>
+          <div class="profile-section">
+            <div class="profile-section-label">Mentorship goals</div>
+            <span class="goal-chip">Raise funding</span>
+            <span class="goal-chip">Scale my business</span>
+            <span class="goal-chip">Build a team</span>
+            <span class="goal-chip">Board relationships</span>
+          </div>
+          <div class="profile-section">
+            <div class="profile-section-label">Career stage</div>
+            <div style="font-size:14px;color:rgba(214,228,247,0.6);">Early Revenue · Technology · Creative / Media</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features-section">
+  <div class="features-inner">
+    <div class="section-label">Built differently</div>
+    <div class="section-h">Every feature earns<br/>your <em>trust.</em></div>
+    <div class="features-grid">
+      <div class="feature-block">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="feature-h">Vetted, not crowdsourced</div>
+        <div class="feature-p">Every mentor is individually reviewed — credentials verified, LinkedIn authenticated, track record assessed. You are matched with someone who has demonstrably done what you are trying to do.</div>
+      </div>
+      <div class="feature-block">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div class="feature-h">Document Vault</div>
+        <div class="feature-p">Share your fundraising deck, financial model, and cap table with per-mentor access controls. Every view is logged. Access revoked instantly. Platform NDA covers every relationship.</div>
+      </div>
+      <div class="feature-block">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="feature-h">Matched to your moment</div>
+        <div class="feature-p">Mentaur matches on your career moment, not just your job title. A founder preparing for Series A needs different guidance than a VP transitioning to the C-suite. The matching reflects that.</div>
+      </div>
+      <div class="feature-block">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="feature-h">Structured accountability</div>
+        <div class="feature-p">Goals are set. Progress is tracked. Sessions are booked and confirmed. Mutual simultaneous ratings after every session. Mentors who don't show up don't stay on the platform.</div>
+      </div>
+      <div class="feature-block">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="feature-h">Private club feed</div>
+        <div class="feature-p">Your feed shows only people you are connected with. Mentor insights, mentee milestones, session reflections — curated, relevant, never noisy. Explore the wider network when you choose to.</div>
+      </div>
+      <div class="feature-block">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="feature-h">Free Explorer tier</div>
+        <div class="feature-p">A genuinely useful experience at no cost — browse mentor profiles, read insights, follow up to 5 mentors. Supported by professional advertising, not a crippled preview of the paid product.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="proof-section">
+  <div class="proof-inner">
+    <div class="section-label">Early members</div>
+    <div class="section-h" style="max-width:500px;">What our beta<br/>members say.</div>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="proof-quote">"I spent six months trying to get five minutes with a seasoned CFO. Within two weeks on Mentaur I had a monthly session with someone who'd taken two companies through IPO. That relationship changed how I think about our cap table."</div>
+        <div class="proof-author">
+          <div class="proof-av av-1">SR</div>
+          <div>
+            <div class="proof-name">S. Rahman</div>
+            <div class="proof-role">Series A founder · FinTech · London</div>
+          </div>
+        </div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-quote">"The Document Vault was what made me trust the platform. Sharing a fundraising deck via email always felt wrong. Having it behind access controls I manage — that's what made me comfortable being genuinely open with my mentor."</div>
+        <div class="proof-author">
+          <div class="proof-av av-2">KM</div>
+          <div>
+            <div class="proof-name">K. Mensah</div>
+            <div class="proof-role">Founding CEO · Climate Tech · Edinburgh</div>
+          </div>
+        </div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-quote">"I've mentored informally for years. Mentaur gave me structure I didn't know I was missing — a clear profile, proper scheduling, and mentees who arrive prepared because the platform makes them prepare."</div>
+        <div class="proof-author">
+          <div class="proof-av av-3">LT</div>
+          <div>
+            <div class="proof-name">L. Thompson</div>
+            <div class="proof-role">Former CPO, FTSE 250 · Mentor since beta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIERS -->
+<section id="pricing" class="tiers-section">
+  <div class="tiers-inner">
+    <div class="section-label">Pricing</div>
+    <div class="section-h">The right plan for<br/>where you are <em>now.</em></div>
+    <div class="tiers-grid">
+      <div class="tier-card">
+        <div class="tier-name-label">Free</div>
+        <div class="tier-name">Explorer</div>
+        <div class="tier-price">£0</div>
+        <div class="tier-period">Ad-supported · always free</div>
+        <div class="tier-divider"></div>
+        <div class="tier-feat">Browse all verified mentor profiles</div>
+        <div class="tier-feat">Read mentor insights in the feed</div>
+        <div class="tier-feat">Follow up to 5 mentors</div>
+        <div class="tier-feat">Post in the Explore feed</div>
+        <div class="tier-feat no">No direct messaging</div>
+        <div class="tier-feat no">No session booking</div>
+        <div class="tier-feat no">No Document Vault</div>
+        <button class="tier-cta outline">Join free</button>
+      </div>
+      <div class="tier-card">
+        <div class="tier-name-label">Entry</div>
+        <div class="tier-name">Associate</div>
+        <div class="tier-price">£49</div>
+        <div class="tier-period">per month · no ads</div>
+        <div class="tier-divider"></div>
+        <div class="tier-feat">1 active mentor relationship</div>
+        <div class="tier-feat">2 sessions per month</div>
+        <div class="tier-feat">Direct messaging</div>
+        <div class="tier-feat">Document Vault (3 docs)</div>
+        <div class="tier-feat">Goal tracking (1 goal)</div>
+        <div class="tier-feat">Session notes</div>
+        <button class="tier-cta outline">Back at this tier</button>
+      </div>
+      <div class="tier-card featured">
+        <div class="tier-popular">Most popular</div>
+        <div class="tier-name-label">Core</div>
+        <div class="tier-name">Professional</div>
+        <div class="tier-price">£89</div>
+        <div class="tier-period">per month · save 15% annually</div>
+        <div class="tier-divider"></div>
+        <div class="tier-feat">2 concurrent mentor relationships</div>
+        <div class="tier-feat">4 sessions per month</div>
+        <div class="tier-feat">48hr priority matching</div>
+        <div class="tier-feat">Unlimited Document Vault</div>
+        <div class="tier-feat">Unlimited goal tracking</div>
+        <div class="tier-feat">Relationship timeline</div>
+        <div class="tier-feat">Milestone feed posts</div>
+        <button class="tier-cta solid">Back at this tier</button>
+      </div>
+      <div class="tier-card">
+        <div class="tier-name-label">Premium</div>
+        <div class="tier-name">Executive</div>
+        <div class="tier-price">£189</div>
+        <div class="tier-period">per month · save 15% annually</div>
+        <div class="tier-divider"></div>
+        <div class="tier-feat">4 concurrent mentor relationships</div>
+        <div class="tier-feat">8 sessions per month</div>
+        <div class="tier-feat">Concierge matching</div>
+        <div class="tier-feat">Quarterly strategy review</div>
+        <div class="tier-feat">Early mentor access</div>
+        <div class="tier-feat">Founder events invitation</div>
+        <div class="tier-feat">Outcome tracking (beta)</div>
+        <button class="tier-cta outline">Back at this tier</button>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;font-size:14px;color:rgba(214,228,247,0.35);">30-day money-back guarantee on all paid plans · Cancel any time · No long-term commitment</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-glow"></div>
+  <div class="cta-inner">
+    <div class="section-label" style="text-align:center;">Join the campaign</div>
+    <div class="cta-h">Be part of making<br/>mentorship <em>accessible.</em></div>
+    <div class="cta-sub">£38,200 raised. 847 backers. 14 days left. Every backer gets founding member status — a permanent badge, priority matching, and a seat at the table when we launch.</div>
+    <div class="cta-actions">
+      <button class="btn-primary" style="font-size:16px;padding:16px 36px;">Back this project on Kickstarter →</button>
+    </div>
+    <div class="cta-note">Flexible funding · You will only be charged if we reach our goal · 30-day delivery commitment</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Men<em>taur</em></div>
+  <div class="footer-text">© 2025 Mentaur · Executive mentorship, made accessible · United Kingdom</div>
+</footer>
+
+<!-- FLOATING BACK BANNER -->
+<div class="back-banner">
+  <div class="back-banner-label">Live on Kickstarter</div>
+  <div class="back-banner-text">Back Mentaur today</div>
+  <div class="back-banner-sub">£38,200 raised · 14 days left</div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
